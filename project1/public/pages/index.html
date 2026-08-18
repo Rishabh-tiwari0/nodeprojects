@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Landing Page</title>
+    <style>
+        :root{--accent:#0066ff;--muted:#6b7280;--bg:#f8fafc}
+        *{box-sizing:border-box}
+        body{font-family:Inter,ui-sans-serif,system-ui,Arial,Helvetica,sans-serif;margin:0;background:var(--bg);color:#0f172a}
+        header{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:#fff;box-shadow:0 1px 4px rgba(2,6,23,0.06)}
+        .logo{font-weight:700;color:var(--accent)}
+        nav a{margin-left:18px;color:var(--muted);text-decoration:none}
+        .container{max-width:1100px;margin:48px auto;padding:0 20px}
+        .hero{display:flex;gap:40px;align-items:center}
+        .hero-left{flex:1}
+        .badge{display:inline-block;background:rgba(0,102,255,0.08);color:var(--accent);padding:6px 10px;border-radius:999px;font-weight:600;margin-bottom:16px}
+        h1{font-size:36px;margin:0 0 12px}
+        p.lead{color:var(--muted);margin:0 0 20px}
+        .cta{display:flex;gap:12px}
+        .btn{background:var(--accent);color:#fff;padding:12px 18px;border-radius:8px;border:0;cursor:pointer;font-weight:600}
+        .btn.secondary{background:#fff;color:var(--accent);border:1px solid rgba(2,6,23,0.06)}
+        .hero-right{flex:1;text-align:right}
+        .card{background:#fff;padding:22px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.06);display:inline-block}
+        .features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}
+        .feature{background:#fff;padding:18px;border-radius:10px}
+        footer{margin-top:64px;padding:28px;text-align:center;color:var(--muted)}
+        @media(max-width:900px){.hero{flex-direction:column;text-align:center}.hero-right{text-align:center}.features{grid-template-columns:1fr}}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">MyProduct</div>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-left">
+                <div class="badge">New · Fast setup</div>
+                <h1>Build faster with MyProduct</h1>
+                <p class="lead">A simple, reliable solution to launch and scale your next project. Delight users with performance and clean design.</p>
+                <div class="cta">
+                    <button class="btn">Get Started — it's free</button>
+                    <button class="btn secondary">Watch Demo</button>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="card">
+                    <strong>Trusted by teams</strong>
+                    <p style="margin:8px 0 0;color:var(--muted)">Used in production by startups and enterprises to ship faster.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features" aria-label="features">
+            <div class="feature">
+                <h3>Fast setup</h3>
+                <p style="color:var(--muted)">Get up and running in minutes with starter templates and clear docs.</p>
+            </div>
+            <div class="feature">
+                <h3>Secure</h3>
+                <p style="color:var(--muted)">Built with security best practices and regular audits.</p>
+            </div>
+            <div class="feature">
+                <h3>Scalable</h3>
+                <p style="color:var(--muted)">Scale from prototype to production without rewrites.</p>
+            </div>
+        </section>
+
+        <section id="pricing" style="margin-top:40px;background:#fff;padding:24px;border-radius:10px">
+            <h2>Simple pricing</h2>
+            <p style="color:var(--muted)">One predictable plan to get you started. Upgrade anytime.</p>
+        </section>
+    </main>
+
+    <footer id="contact">
+        © 2026 MyProduct — <span style="color:var(--muted)">contact@myproduct.example</span>
+    </footer>
+</body>
+</html>
