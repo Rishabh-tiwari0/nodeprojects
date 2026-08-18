@@ -3,10 +3,12 @@ const path = require("path");
 const app = express();
 const port = 8080;
 
-app.use(express.static(path.join(__dirname, "frontend")));
+// Serve built assets (JS, CSS, images) from dist
+app.use(express.static(path.join(__dirname, "dist")));
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "frontend/dist/index.html"));
+// Fallback: any other route (e.g. client-side routes) also gets index.html
+app.get(/(.*)/, (req, res) => {
+  res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
 
 app.listen(port, () => {
